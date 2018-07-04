@@ -7,7 +7,7 @@ app.listen(process.env.PORT || 8000);
 
 app.get('/*', function(req, res) {
     console.log('?????????? ',`${process.env.PWD}` )
-    res.send(`${process.env.PWD}/index.html`)
+    res.sendFile(`${process.env.PWD}/index.html`)
 });
 
 console.log('console listening');
