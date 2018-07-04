@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Response, RequestOptions } from '@angular/http';
 // tslint:disable-next-line:import-blacklist
 import 'rxjs/Rx';
-import { Observable } from 'rxjs/Observable';
+// import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
 import { HttpHeaders } from '@angular/common/http';
 import { SharedService } from '../shared/shared.service';
@@ -34,9 +34,10 @@ export class AddDataService {
             branch: branch,
             accountType: accType,
             gender: gendr
-        },  this.httpOptions).map(
-            (res: Response) => this.handleMeResponse(res)).catch(
-                (err: Response) => this.handleMeError(err));
+        },  this.httpOptions);
+        // .map(
+        //     (res: Response) => this.handleMeResponse(res)).catch(
+        //         (err: Response) => this.handleMeError(err));
     }
 
 
@@ -46,9 +47,10 @@ export class AddDataService {
             branch: branch,
             accountType: accType,
             gender: gender
-        },  this.httpOptions).map(
-            (res: Response) => this.handleMeResponse(res)).catch(
-                (err: Response) => this.handleMeError(err));
+        },  this.httpOptions);
+        // .map(
+        //     (res: Response) => this.handleMeResponse(res)).catch(
+        //         (err: Response) => this.handleMeError(err));
     }
 
     private handleMeResponse(res: Response) {
@@ -56,6 +58,6 @@ export class AddDataService {
    }
 
    private handleMeError(err: Response) {
-       return Observable.throw(err);
+      // return Observable.throw(err);
    }
 }
