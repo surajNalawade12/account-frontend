@@ -26,8 +26,7 @@ export class AccountService {
                 private router: Router,
                 private sharedservice: SharedService
             ) {
-        // this.currentUser = this.sharedservice.getToken();
-        // console.log('currentuser', this.currentUser);
+
     }
 
     httpOptions = {
