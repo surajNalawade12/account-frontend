@@ -7,7 +7,7 @@ app.listen(process.env.PORT || 8000);
 
 app.get('/', function(req, res) {
     console.log('?????????? ',__dirname );
-    res.sendFile('../index.html');
+    res.sendFile(__dirname + '/src/index.html');
 });
 
 console.log('console listening');
