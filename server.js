@@ -5,8 +5,8 @@ app.use(express.static('/dist'));
 
 app.listen(process.env.PORT || 8000);
 
-app.get('/*', function(req, res) {
-    console.log('?????????? ',`${process.env.PWD}` )
+app.get('/', function(req, res) {
+    console.log('?????????? ',__dirname );
     res.sendFile(__dirname + '/index.html');
 });
 
