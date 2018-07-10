@@ -62,7 +62,6 @@ export class AccountService {
                 (err: Response) => this.handleMeError(err));
     }
 
-
     deleteAccountRecord(id: string) {
         return this.http.delete(this.url + id + '/', this.httpOptions);
     }
